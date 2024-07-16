@@ -1,0 +1,57 @@
+/*
+// Importing required modules and components
+import React, { useState, useContext, useEffect } from 'react';
+import LoginForm from './components/Loginpage';
+import SignupForm from './components/Registerpage';
+import { AuthContext } from './components/AuthContext';  // Make sure the path is correct
+import Homepage from './components/Homepage';
+
+// Main AppContent component
+function AppContent() {
+
+    // State variables
+  const { isAuthenticated, setIsAuthenticated, setToken, token, username, setUsername } = useContext(AuthContext);
+//if user is authenticated then they go straight to homepage otherwise they see login/signup form
+  useEffect(() => {
+    // Check if the user is authenticated
+    if (isAuthenticated) {
+      // Go to homepage
+     Homepage();
+     else {
+        // If the user is not authenticated have them login or signup
+        LoginForm();
+      }}}
+//
+
+  // Login handler
+  const handleLogin = (token, username) => {
+    localStorage.setItem('token', token);
+    setToken(token);
+    localStorage.setItem('username', username);
+    setUsername(username);
+    setIsAuthenticated(true);
+  };
+
+  // Signup handler
+  const handleSignup = (token, username) => {
+    localStorage.setItem('token', token);
+    localStorage.setItem('username', username);
+    setUsername(username);
+    setIsAuthenticated(true);
+  };
+
+  // Logout handler
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('username');
+    setToken(null);
+    setUsername(null)
+    setIsAuthenticated(false);
+    
+  };
+  // Render the component
+  
+
+// Exporting the AppContent component for use in other parts of the application
+export default AppContent;
+*/
