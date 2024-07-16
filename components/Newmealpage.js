@@ -27,7 +27,7 @@ const Newmealpage = () => {
 
     const handleSubmit = async e =>{
         e.preventDefault()
-        await axios.post('http://localhost:5000/meals',meal)
+        await axios.post('https://meal-time-backend.onrender.com/meals',meal)
         navigate('/')
     }
 

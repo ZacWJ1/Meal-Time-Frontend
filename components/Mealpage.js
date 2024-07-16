@@ -21,7 +21,7 @@ const {id}= useParams()
 
 useEffect(()=>{
     const fetchMeal =async()=>{
-        const res =await axios.get(`http://localhost:5000/meals/${id}`)
+        const res =await axios.get(`https://meal-time-backend.onrender.com/meals/${id}`)
         setMeal(res.data)
     }
     fetchMeal()

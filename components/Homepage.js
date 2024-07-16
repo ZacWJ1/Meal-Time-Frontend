@@ -9,7 +9,7 @@ const Homepage=()=>{
 
     useEffect(()=>{
         const fetchMeals =async()=>{
-            const res =await axios.get(`http://localhost:5000/meals`)
+            const res =await axios.get(`https://meal-time-backend.onrender.com/meals`)
             setMeals(res.data)
         }
         fetchMeals()
@@ -17,7 +17,7 @@ const Homepage=()=>{
 
 const handleDelete= async (id) => {
     try{
-        await axios.delete(`http://localhost:5000/meals/${id}`)//remove from DB
+        await axios.delete(`https://meal-time-backend.onrender.com/meals/${id}`)//remove from DB
         setMeals(meals.filter((meal) => meal._id !==id))//remove item from state    
     } catch (error) {
         console.error('Error deleting post', error)
